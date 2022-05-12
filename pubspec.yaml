@@ -44,6 +44,11 @@ flutter:
   assets:
     - assets/
     - assets/svg/
+    - assets/svg/light/
+    - assets/svg/dark/
+    - assets/png/
+    - assets/png/light/
+    - assets/png/dark/
 
   fonts:
     - family: Spoqa

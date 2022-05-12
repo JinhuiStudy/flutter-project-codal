@@ -9,6 +9,7 @@ ThemeData theme() {
   return ThemeData(
     primaryColor: ColorPalette.bg,
     scaffoldBackgroundColor: ColorPalette.bg,
+    dividerColor: ColorPalette.border,
     fontFamily: Spoqa.spoqa,
     // TODO Change
     appBarTheme: const AppBarTheme(
@@ -21,9 +22,7 @@ ThemeData theme() {
     ),
     // TODO Change
     textTheme: const TextTheme(
-      bodyLarge: Spoqa.black_s20_w700_h28,
-      bodyMedium: Spoqa.black_s20_w700_h28,
-      bodySmall: Spoqa.black_s20_w700_h28,
+      caption: Spoqa.textSub_s14_w400_h18,
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
@@ -33,6 +32,7 @@ ThemeData themeDark() {
   return ThemeData(
     primaryColor: ColorPalette.bgDark,
     scaffoldBackgroundColor: ColorPalette.bgDark,
+    dividerColor: ColorPalette.borderDark,
     fontFamily: Spoqa.spoqa,
     // TODO Change
     appBarTheme: const AppBarTheme(
@@ -45,9 +45,7 @@ ThemeData themeDark() {
     ),
     // TODO Change
     textTheme: const TextTheme(
-      bodyLarge: Spoqa.black_s20_w700_h28,
-      bodyMedium: Spoqa.black_s20_w700_h28,
-      bodySmall: Spoqa.black_s20_w700_h28,
+      caption: Spoqa.textSubDark_s14_w400_h18,
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
