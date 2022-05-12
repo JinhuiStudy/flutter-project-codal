@@ -7,32 +7,48 @@ import 'package:flutter_codal/app/core/ui/core_ui.dart';
 
 ThemeData theme() {
   return ThemeData(
-    primaryColor: ColorPalette.black,
-    scaffoldBackgroundColor: ColorPalette.white,
+    primaryColor: ColorPalette.bg,
+    scaffoldBackgroundColor: ColorPalette.bg,
     fontFamily: Spoqa.spoqa,
-    appBarTheme: appBarTheme(),
-    textTheme: textTheme(),
+    // TODO Change
+    appBarTheme: const AppBarTheme(
+      toolbarHeight: kAppBarHeight,
+      color: ColorPalette.bg,
+      elevation: 0,
+      iconTheme: IconThemeData(color: ColorPalette.white),
+      titleTextStyle: Spoqa.black_s20_w700_h28,
+      toolbarTextStyle: Spoqa.black_s20_w700_h28,
+    ),
+    // TODO Change
+    textTheme: const TextTheme(
+      bodyLarge: Spoqa.black_s20_w700_h28,
+      bodyMedium: Spoqa.black_s20_w700_h28,
+      bodySmall: Spoqa.black_s20_w700_h28,
+    ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }
 
-// TODO Change
-AppBarTheme appBarTheme() {
-  return const AppBarTheme(
-    toolbarHeight: kAppBarHeight,
-    color: ColorPalette.white,
-    elevation: 0,
-    iconTheme: IconThemeData(color: ColorPalette.white),
-    titleTextStyle: Spoqa.black_s20_w700_h28,
-    toolbarTextStyle: Spoqa.black_s20_w700_h28,
-  );
-}
-
-// TODO Change
-TextTheme textTheme() {
-  return const TextTheme(
-    bodyLarge: Spoqa.black_s20_w700_h28,
-    bodyMedium: Spoqa.black_s20_w700_h28,
-    bodySmall: Spoqa.black_s20_w700_h28,
+ThemeData themeDark() {
+  return ThemeData(
+    primaryColor: ColorPalette.bgDark,
+    scaffoldBackgroundColor: ColorPalette.bgDark,
+    fontFamily: Spoqa.spoqa,
+    // TODO Change
+    appBarTheme: const AppBarTheme(
+      toolbarHeight: kAppBarHeight,
+      color: ColorPalette.bgDark,
+      elevation: 0,
+      iconTheme: IconThemeData(color: ColorPalette.white),
+      titleTextStyle: Spoqa.black_s20_w700_h28,
+      toolbarTextStyle: Spoqa.black_s20_w700_h28,
+    ),
+    // TODO Change
+    textTheme: const TextTheme(
+      bodyLarge: Spoqa.black_s20_w700_h28,
+      bodyMedium: Spoqa.black_s20_w700_h28,
+      bodySmall: Spoqa.black_s20_w700_h28,
+    ),
+    visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }

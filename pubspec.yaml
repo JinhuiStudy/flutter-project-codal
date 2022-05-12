@@ -16,6 +16,13 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
+  bloc: ^8.0.3
+  flutter_bloc: ^8.0.1
+
+  freezed_annotation: ^2.0.1
+
+  flutter_svg: ^1.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -23,13 +30,20 @@ dev_dependencies:
 
   flutter_lints: ^1.0.0
 
+  # flutter pub run build_runner watch --delete-conflicting-outputs
+  freezed: ^2.0.2
+  build_runner:
+  # .g.dart dependency
+  json_serializable:
+
 flutter:
 
 
   uses-material-design: true
 
-  # assets:
-  #   - assets/
+  assets:
+    - assets/
+    - assets/svg/
 
   fonts:
     - family: Spoqa

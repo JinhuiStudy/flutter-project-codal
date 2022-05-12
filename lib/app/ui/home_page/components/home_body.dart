@@ -5,7 +5,7 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    throw const Center(
+    return const Center(
       child: Text("HOME"),
     );
   }
