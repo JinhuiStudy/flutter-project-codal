@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_codal/app/ui/home_page/home_page.dart';
 import 'package:flutter_codal/app/ui/login_page/login_page.dart';
+import 'package:flutter_codal/app/ui/main_page/main_page.dart';
 
 enum Routes {
-  home,
+  main,
   login,
 }
 
 const routesPath = {
-  Routes.home: "/banners",
+  Routes.main: "/main",
   Routes.login: "/login",
 };
 
 final pages = {
-  Routes.home.path: (context) => const HomePage(),
+  Routes.main.path: (context) => const MainPage(),
   Routes.login.path: (context) => const LoginPage(),
 };
 

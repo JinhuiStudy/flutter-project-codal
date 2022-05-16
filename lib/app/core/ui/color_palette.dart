@@ -13,6 +13,7 @@ class ColorPalette {
   static const textMain = Color(0xFF000000);
   static const textSub = Color(0xFF58596D);
   static const border = Color(0xFFD7DCE5);
+  static const divider = Color(0xFFEFEFEF);
 
   static const bgDark = Color(0xFF394046);
   static const pointDark = Color(0xFF1E2327);
@@ -22,4 +23,5 @@ class ColorPalette {
   static const textMainDark = Color(0xFFFFFFFF);
   static const textSubDark = Color(0xFF939AA2);
   static const borderDark = Color(0xFF283037);
+  static const dividerDark = Color(0xFF2C3136);
 }

@@ -46,6 +46,8 @@ flutter:
     - assets/svg/
     - assets/svg/light/
     - assets/svg/dark/
+    - assets/svg/light/bottom_nav/
+    - assets/svg/dark/bottom_nav/
     - assets/png/
     - assets/png/light/
     - assets/png/dark/

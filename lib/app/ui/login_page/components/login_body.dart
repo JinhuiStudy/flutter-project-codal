@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codal/app/core/routes/routes.dart';
 import 'package:flutter_codal/app/core/ui/core_ui.dart';
 import 'package:flutter_codal/app/ui/components/codal_svg.dart';
 import 'package:flutter_codal/app/ui/login_page/components/social_icon.dart';
@@ -37,9 +38,14 @@ class LoginBody extends StatelessWidget {
   }
 
   Widget _notLogin(BuildContext context) {
-    return Text(
-      "비회원으로 계속하기",
-      style: Theme.of(context).textTheme.caption,
+    return GestureDetector(
+      onTap: () {
+        Routes.main.push(context);
+      },
+      child: Text(
+        "비회원으로 계속하기",
+        style: Theme.of(context).textTheme.caption,
+      ),
     );
   }
 }
