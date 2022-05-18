@@ -2,24 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_codal/app/ui/login_page/login_page.dart';
 import 'package:flutter_codal/app/ui/main_page/main_page.dart';
 
+typedef PageBuilder = Widget Function(BuildContext context);
+
 enum Routes {
-  main,
-  login,
+  main("/main", MainPage()),
+  login("/login", LoginPage());
+
+  final String path;
+  final Widget page;
+  const Routes(this.path, this.page);
 }
 
-const routesPath = {
-  Routes.main: "/main",
-  Routes.login: "/login",
-};
+final pages = generatePages();
 
-final pages = {
-  Routes.main.path: (context) => const MainPage(),
-  Routes.login.path: (context) => const LoginPage(),
-};
+Map<String, PageBuilder> generatePages() {
+  final map = <String, PageBuilder>{};
+  for (var e in Routes.values) {
+    map[e.path] = (BuildContext context) => e.page;
+  }
+  return map;
+}
 
 extension RoutesExtension on Routes {
-  String get path => routesPath[this]!;
-
   Future<T?> push<T extends Object?>(BuildContext context, {Object? arguments}) async {
     return await Navigator.of(context).pushNamed<T?>(path, arguments: arguments);
   }
