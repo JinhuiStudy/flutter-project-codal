@@ -35,6 +35,16 @@ ThemeData theme() {
     textTheme: const TextTheme(
       caption: Spoqa.textSub_s14_w400_h18,
     ),
+    tabBarTheme: const TabBarTheme(
+        labelStyle: Spoqa.textTabEnable_s12_w700_h14,
+        unselectedLabelStyle: Spoqa.textTabDisable_s12_w700_h14,
+        indicator: UnderlineTabIndicator(
+            borderSide: BorderSide(
+                width: 2,
+                color: ColorPalette.textTabEnable
+            )
+        )
+    ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }
@@ -68,6 +78,16 @@ ThemeData themeDark() {
     // TODO Change
     textTheme: const TextTheme(
       caption: Spoqa.textSubDark_s14_w400_h18,
+    ),
+    tabBarTheme: const TabBarTheme(
+        labelStyle: Spoqa.textTabEnableDark_s12_w700_h14,
+        unselectedLabelStyle: Spoqa.textTabDisableDark_s12_w700_h14,
+        indicator: UnderlineTabIndicator(
+            borderSide: BorderSide(
+                width: 2,
+                color: ColorPalette.textTabEnableDark
+            )
+        )
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
