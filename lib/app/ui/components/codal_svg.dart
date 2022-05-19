@@ -7,14 +7,16 @@ class CodalSvg extends StatelessWidget {
   const CodalSvg({
     Key? key,
     required this.fileName,
+    this.fit = BoxFit.contain,
   }) : super(key: key);
 
   final String fileName;
+  final BoxFit fit;
 
   @override
   Widget build(BuildContext context) {
     final isDark = context.watch<ThemeCubit>().state.isDark;
     final path = isDark ? "assets/svg/dark/" : "assets/svg/light/";
-    return SvgPicture.asset("$path$fileName.svg");
+    return SvgPicture.asset("$path$fileName.svg", fit: fit);
   }
 }
