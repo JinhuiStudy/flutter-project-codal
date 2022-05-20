@@ -61,6 +61,9 @@ class Spoqa {
   static const textMain_s12_w400_h20 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.textMain, fontSize: 12, fontWeight: FontWeight.w400, height: 20);
   static const textMainDark_s12_w400_h20 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.textMainDark, fontSize: 12, fontWeight: FontWeight.w400, height: 20);
 
+  static const textMain_s20_w700_h20 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.textMain, fontSize: 20, fontWeight: FontWeight.w700, height: 20);
+  static const textMainDark_s20_w700_h20 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.textMainDark, fontSize: 20, fontWeight: FontWeight.w700, height: 20);
+
   static const white_s10_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.white, fontSize: 10, fontWeight: FontWeight.w500, height: 14);
   static const white_s12_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.white, fontSize: 12, fontWeight: FontWeight.w500, height: 14);
 }
