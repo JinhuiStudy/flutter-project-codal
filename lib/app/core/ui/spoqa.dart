@@ -66,6 +66,18 @@ class Spoqa {
 
   static const white_s10_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.white, fontSize: 10, fontWeight: FontWeight.w500, height: 14);
   static const white_s12_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.white, fontSize: 12, fontWeight: FontWeight.w500, height: 14);
+
+  static const point_s12_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.point, fontSize: 12, fontWeight: FontWeight.w500, height: 14);
+
+  static const textTabEnable_s14_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.textTabEnable, fontSize: 14, fontWeight: FontWeight.w500, height: 14);
+  static const textTabEnableDark_s14_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.textTabEnableDark, fontSize: 14, fontWeight: FontWeight.w500, height: 14);
+
+  static const textSubDark_s10_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.textSubDark, fontSize: 10, fontWeight: FontWeight.w500, height: 14);
+  static const textSub_s10_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.textSub, fontSize: 10, fontWeight: FontWeight.w500, height: 14);
+
+  static const cFF767676_s10_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.cFF767676, fontSize: 10, fontWeight: FontWeight.w500, height: 14);
+  static const cFF767676_s12_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.cFF767676, fontSize: 12, fontWeight: FontWeight.w500, height: 14);
+  static const cFF767676_s10_w400_h10 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.cFF767676, fontSize: 10, fontWeight: FontWeight.w400, height: 10);
 }
 
 class CustomTextStyle extends TextStyle {

@@ -24,4 +24,7 @@ class ColorPalette {
   static const textSubDark = Color(0xFF939AA2);
   static const borderDark = Color(0xFF283037);
   static const dividerDark = Color(0xFF2C3136);
+
+  static const cFF2C3136 = Color(0xFF2C3136);
+  static const cFF767676 = Color(0xFF767676);
 }

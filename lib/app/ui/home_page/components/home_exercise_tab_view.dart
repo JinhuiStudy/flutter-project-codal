@@ -29,13 +29,13 @@ class _HomeExerciseTabViewState extends State<HomeExerciseTabView> with Automati
           eHeight(12),
           ...List.generate(2, (index) => Padding(
             padding: EdgeInsets.only(bottom: index == 1 ? 45 : 24),
-            child: CodeTestContainer(title: '신비로운 유적 탐험', source: '2017 KAKAOCODE 본선', lang: ['a', 'a'], level: '달인'),
+            child: CodeExamContainer(title: '신비로운 유적 탐험', source: '2017 KAKAOCODE 본선', lang: ['a', 'a'], level: '달인'),
           )),
           HomeSectionTitle(text: '코달 추천 문제', icon: 'codal_icon', isSvg: true, onTap: () => null),
           eHeight(12),
           ...List.generate(3, (index) => Padding(
             padding: EdgeInsets.only(bottom: index == 2 ? 41 : 24),
-            child: CodeTestContainer(title: '신비로운 유적 탐험', source: '2017 KAKAOCODE 본선', lang: ['a', 'a'], level: '달인'),
+            child: CodeExamContainer(title: '신비로운 유적 탐험', source: '2017 KAKAOCODE 본선', lang: ['a', 'a'], level: '달인'),
           )),
           eHeight(kBottomNavigationBarHeight),
         ],
@@ -57,12 +57,12 @@ class _HomeExerciseTabViewState extends State<HomeExerciseTabView> with Automati
   }
 
   /// 색상 이름
-  Widget _standardDateLabel(isDark, String date) => Text('기준 $date', style: isDark ? Spoqa.textSubDark_s10_w400_h10 : Spoqa.textSub_s10_w400_h10);
+  Widget _standardDateLabel(isDark, String date) => Text('기준 $date', style: isDark ? Spoqa.textSubDark_s10_w400_h10 : Spoqa.cFF767676_s10_w400_h10);
 
   Widget _testTitle(isDark, String title) => Text(title, style : isDark ? Spoqa.textMainDark_s20_w500_h20 : Spoqa.textMain_s20_w500_h20);
 
   /// 색상 이름
-  Widget _testSource(isDark, String text) => Text(text, style: isDark ? Spoqa.textSubDark_s12_w500_h14 : Spoqa.textSub_s12_w500_h14);
+  Widget _testSource(isDark, String text) => Text(text, style: isDark ? Spoqa.textSubDark_s12_w500_h14 : Spoqa.cFF767676_s12_w500_h14);
 
   /// 수정하기 (lang만 위로가도록)
   Widget _langAndLevelRow(bool isDark){

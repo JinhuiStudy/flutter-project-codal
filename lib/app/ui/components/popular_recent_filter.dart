@@ -22,7 +22,7 @@ class PopularRecentFilter extends StatelessWidget {
     return Row(
       children: [
         GestureDetector(
-          onTap: popularTap,
+          onTap: isPopular ? null : popularTap,
           child: Container(
             color: Colors.transparent,
             child: Row(
@@ -40,12 +40,12 @@ class PopularRecentFilter extends StatelessWidget {
         ),
         eWidth(11.5),
         GestureDetector(
-          onTap: recentTap,
+          onTap: isPopular ? recentTap : null,
           child: Container(
             color: Colors.transparent,
             child: Row(
               children: [
-                Container(
+                SizedBox(
                   width: 13.23,
                   height: 16,
                   child: CodalSvg(fileName: isPopular ? 'recent_off' : 'recent_on'),

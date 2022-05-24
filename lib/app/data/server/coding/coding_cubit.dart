@@ -5,9 +5,11 @@ class CodingCubit extends Cubit<CodingState>{
   CodingCubit() : super(CodingState(codingList: []));
 
   void filter({required bool isPopular}){
+    /// 인기순 최신순 리스트 받기
     emit(state.copyWith(isPopular: isPopular));
   }
 
+  /// 임시
   void getData(){
     List<CodingDummy> list = [];
     for(int i = 1 ; i< 6 ; i++){

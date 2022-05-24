@@ -4,8 +4,8 @@ import 'package:flutter_codal/app/core/ui/core_ui.dart';
 import 'package:flutter_codal/app/data/local/theme/theme_cubit.dart';
 import 'package:flutter_codal/app/ui/home_page/components/exam_level_box.dart';
 
-class CodeTestContainer extends StatelessWidget {
-  const CodeTestContainer(
+class CodeExamContainer extends StatelessWidget {
+  const CodeExamContainer(
       {Key? key,
       required this.title,
       required this.source,
@@ -46,7 +46,7 @@ class CodeTestContainer extends StatelessWidget {
 
   Widget _title(bool isDark) => Text(title, style: isDark ? Spoqa.textTabEnableDark_s14_w500_h16 : Spoqa.textTabEnable_s14_w500_h16);
 
-  Widget _source(bool isDark) => Text(source, style: isDark ? Spoqa.textSubDark_s10_w400_h14 : Spoqa.textSub_s10_w400_h14);
+  Widget _source(bool isDark) => Text(source, style: isDark ? Spoqa.textSubDark_s10_w500_h14 : Spoqa.cFF767676_s10_w500_h14);
 
   Widget _langAndLevelRow(bool isDark) {
     double maxWidth = (SizeHelper.deviceWidth - kHorizontalPadding*2 - 32) * 0.7;
