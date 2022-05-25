@@ -56,15 +56,12 @@ class _HomeExerciseTabViewState extends State<HomeExerciseTabView> with Automati
     );
   }
 
-  /// 색상 이름
   Widget _standardDateLabel(isDark, String date) => Text('기준 $date', style: isDark ? Spoqa.textSubDark_s10_w400_h10 : Spoqa.cFF767676_s10_w400_h10);
 
   Widget _testTitle(isDark, String title) => Text(title, style : isDark ? Spoqa.textMainDark_s20_w500_h20 : Spoqa.textMain_s20_w500_h20);
 
-  /// 색상 이름
   Widget _testSource(isDark, String text) => Text(text, style: isDark ? Spoqa.textSubDark_s12_w500_h14 : Spoqa.cFF767676_s12_w500_h14);
 
-  /// 수정하기 (lang만 위로가도록)
   Widget _langAndLevelRow(bool isDark){
     double maxWidth = (SizeHelper.deviceWidth - kHorizontalPadding*2) * 0.7;
     return Row(

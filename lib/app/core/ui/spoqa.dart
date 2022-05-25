@@ -78,6 +78,10 @@ class Spoqa {
   static const cFF767676_s10_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.cFF767676, fontSize: 10, fontWeight: FontWeight.w500, height: 14);
   static const cFF767676_s12_w500_h14 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.cFF767676, fontSize: 12, fontWeight: FontWeight.w500, height: 14);
   static const cFF767676_s10_w400_h10 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.cFF767676, fontSize: 10, fontWeight: FontWeight.w400, height: 10);
+
+  static const textTabEnableDark_s16_w500_h16 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.textTabEnableDark, fontSize: 16, fontWeight: FontWeight.w500, height: 16);
+  static const textTabEnable_s16_w500_h16 = CustomTextStyle(fontFamily: spoqa, color: ColorPalette.textTabEnable, fontSize: 16, fontWeight: FontWeight.w500, height: 16);
+
 }
 
 class CustomTextStyle extends TextStyle {

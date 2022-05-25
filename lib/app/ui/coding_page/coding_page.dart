@@ -3,19 +3,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_codal/app/core/ui/core_ui.dart';
 import 'package:flutter_codal/app/data/local/theme/theme_cubit.dart';
 import 'package:flutter_codal/app/data/server/coding/coding_cubit.dart';
+import 'package:flutter_codal/app/ui/coding_page/components/custom_drop_down.dart';
 import 'package:flutter_codal/app/ui/coding_page/components/filter_box.dart';
 import 'package:flutter_codal/app/ui/components/codal_svg.dart';
 import 'package:flutter_codal/app/ui/components/popular_recent_filter.dart';
 import 'package:flutter_codal/app/ui/home_page/components/code_exam_container.dart';
 
-class CodingPage extends StatefulWidget {
+class CodingPage extends StatelessWidget {
   const CodingPage({Key? key}) : super(key: key);
 
-  @override
-  State<CodingPage> createState() => _CodingPageState();
-}
-
-class _CodingPageState extends State<CodingPage> {
   Widget _title() {
     return Builder(builder: (context) {
       bool isDark = context.watch<ThemeCubit>().state.isDark;
@@ -38,29 +34,46 @@ class _CodingPageState extends State<CodingPage> {
 
   Widget _firstFilter() {
     return Builder(
-      builder: (context) {
-        bool isDark = context.watch<ThemeCubit>().state.isDark;
-        return Row(
-          children: [
-            Expanded(
-              child: Container(
-                height: 24,
-                color: Colors.orange,
+        builder: (context) {
+          bool isDark = context.watch<ThemeCubit>().state.isDark;
+          final codingState = context.watch<CodingCubit>().state;
+          return Row(
+            children: [
+              Expanded(
+                child: CustomDropDown(
+                  itemList: codingState.firstDropList.map((e) => e.title).toList(),
+                  selectedItem: codingState.firstSelectedItem,
+                  isDark: isDark,
+                  onChange: (String value) {  },
+                ),
               ),
-            ),
-            eWidth(18),
-            Expanded(
-              child: Container(
-                height: 24,
-                color: Colors.orange,
+              // Expanded(
+              //   child: DropdownButton(
+              //       isExpanded: true,
+              //       icon: CodalSvg(fileName: 'keyboard_arrow_bottom'),
+              //
+              //       value: codingState.firstSelectedItem,
+              //       items: codingState.firstDropList.map((e) => DropdownMenuItem(value : e.title, child: Text(e.title, style: isDark ? Spoqa.textTabEnableDark_s16_w500_h16 : Spoqa.textTabEnable_s16_w500_h16,))).toList(),
+              //       onChanged: (value){
+              //         context.read<CodingCubit>().firstDropChange(value.toString());
+              //       }
+              //   ),
+              // ),
+              eWidth(18),
+              Expanded(
+                child: CustomDropDown(
+                  itemList: [''],
+                  selectedItem: 'selectItem',
+                  isDark: isDark,
+                  onChange: (String value) {  },
+                ),
               ),
-            ),
-            eWidth(9),
-            Text('.JS', style: isDark ? Spoqa.textTabEnableDark_s14_w500_h14 : Spoqa.textTabEnable_s14_w500_h14,),
-            eWidth(16),
-          ],
-        );
-      }
+              eWidth(9),
+              Text('.JS', style: isDark ? Spoqa.textTabEnableDark_s14_w500_h14 : Spoqa.textTabEnable_s14_w500_h14,),
+              eWidth(16),
+            ],
+          );
+        }
     );
   }
 
@@ -74,7 +87,7 @@ class _CodingPageState extends State<CodingPage> {
             runSpacing: 8,
             children: List.generate(
               3,
-              (index) => FilterBox(label: '달인', onTap: () => null),
+                  (index) => FilterBox(label: '달인', onTap: () => null),
             ),
           ),
         ),
@@ -137,14 +150,14 @@ class _CodingPageState extends State<CodingPage> {
       children: [
         ...List.generate(
             items.length,
-            (index) => Padding(
-                  padding: const EdgeInsets.only(bottom: 24),
-                  child: CodeExamContainer(
-                      title: items[index].title,
-                      source: items[index].source,
-                      lang: items[index].lang.map((e) => e.imageUrl).toList(),
-                      level: items[index].level),
-                )),
+                (index) => Padding(
+              padding: const EdgeInsets.only(bottom: 24),
+              child: CodeExamContainer(
+                  title: items[index].title,
+                  source: items[index].source,
+                  lang: items[index].lang.map((e) => e.imageUrl).toList(),
+                  level: items[index].level),
+            )),
         eHeight(kBottomNavigationBarHeight),
       ],
     );
